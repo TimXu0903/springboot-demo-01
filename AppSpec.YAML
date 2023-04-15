@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: s3://my-bucket/my-app.jar
+    destination: /home/ec2-user/my-app.jar
+hooks:
+  BeforeInstall:
+    - location: scripts/start_app.sh
+      timeout: 300
+      runas: ec2-user
+  AfterInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/start_app.sh
+      timeout: 300
+      runas: ec2-user
+
