@@ -9,6 +9,6 @@ import java.net.InetAddress;
 public class K8SController {
     @RequestMapping("/k8s")
     public String k8s(){
-        return "Hi Tim, this is 2023, Welcome!<br/>";
+        return "Hi Tim, this is 2023, Welcome<br/>";
     }
 }
