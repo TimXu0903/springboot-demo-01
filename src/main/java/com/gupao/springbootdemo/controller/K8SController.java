@@ -9,7 +9,7 @@ import java.net.InetAddress;
 public class K8SController {
     @RequestMapping("/k8s")
     public String k8s(){
-        return "Hi Tim, Welcome to Sydney" +
+        return "Hi Tim, Welcome to Sydney, " +
                 "this is v02";
     }
 }
